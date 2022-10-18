@@ -12,6 +12,7 @@ namespace OrdersSystem.Classes
         public string City { get; set; }
         public int CustomerId { get; set; }
 
+
         public Customers(string fullName, string city, int customerId)
         {
             FullName = fullName;

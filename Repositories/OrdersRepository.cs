@@ -20,6 +20,7 @@ namespace OrdersSystem.Repositories
             orders.Add(new Orders(115, 6, "New"));
             orders.Add(new Orders(116, 7, "New"));
         }
+
         public List<Orders> Retrieve()
         {
             return orders;

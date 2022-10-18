@@ -13,6 +13,7 @@ namespace OrdersSystem.Classes
         public double ProductPrice { get; set; }
         public int ProductQuantity { get; set; }
 
+
         public Products(int productID, string productName, double productPrice, int productQuantity)
         {
             ProductID = productID;

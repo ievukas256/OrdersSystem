@@ -20,6 +20,7 @@ namespace OrdersSystem.Repositories
             customers.Add(new Customers("MB Brolija", "Vilnius", 6));
             customers.Add(new Customers("Justina Marinyte", "Druskininkai", 7));
         }
+
         public List<Customers> Retrieve()
         {
             return customers;

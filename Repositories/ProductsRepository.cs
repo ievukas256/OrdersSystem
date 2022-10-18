@@ -20,6 +20,7 @@ namespace OrdersSystem.Repositories
             products.Add(new Products(2006, "Spausdintuvas", 250, 7));
             products.Add(new Products(2007, "Monitorius", 450, 0));
         }
+
         public List<Products> Retrieve()
         {
             return products;

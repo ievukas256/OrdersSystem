@@ -12,7 +12,6 @@ namespace OrdersSystem.Classes
         public int CustomerId { get; set; }
         public string OrderStatus { get; set; }
        
-
         public Orders(int orderNumber, int customerId, string orderStatus)
         {
             OrderNumber = orderNumber;
