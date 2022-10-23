@@ -1,0 +1,37 @@
+[
+  {
+    "CustomerID": 1,
+    "FullName": "Algis Padalgis",
+    "City": "Kaunas"
+  },
+  {
+    "CustomerID": 2,
+    "FullName": "Algimantas Padalgietis",
+    "City": "Kaunas"
+  },
+  {
+    "CustomerID": 3,
+    "FullName": "Ona Sudargiene",
+    "City": "Vilnius"
+  },
+  {
+    "CustomerID": 4,
+    "FullName": "Petras Jonaitis",
+    "City": "Jurbarkas"
+  },
+  {
+    "CustomerID": 5,
+    "FullName": "UAB Saudirga",
+    "City": "Kaunas"
+  },
+  {
+    "CustomerID": 6,
+    "FullName": "MB Brolija",
+    "City": "Vilnius"
+  },
+  {
+    "CustomerID": 7,
+    "FullName": "Justina Marinyte",
+    "City": "Druskininkai"
+  }
+]
