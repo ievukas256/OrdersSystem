@@ -55,40 +55,48 @@ namespace OrdersSystem.Repositories
 		{
 			products.Add(entity);
 		}
-		public void AddProduct()
+		public Products AddProductEntities()
 		{
-			Console.WriteLine("Iveskite produkto pavadinima:");
-			string name = Console.ReadLine();
-			Console.WriteLine("Iveskite produkto kaina:");
-			double price = int.Parse(Console.ReadLine());
-			Console.WriteLine("Iveskite produkto kieki:");
-			int quant = int.Parse(Console.ReadLine());
-			int id = products.Max(x => x.ProductID);
-			int id2 = id + 1;
+            Console.WriteLine("Iveskite produkto pavadinima:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Iveskite produkto kaina:");
+            double price = int.Parse(Console.ReadLine());
+            Console.WriteLine("Iveskite produkto kieki:");
+            int quant = int.Parse(Console.ReadLine());
+            int id = products.Max(x => x.ProductID);
+            int id2 = id + 1;
 
-			var newProduct = new Products(id2, name, price, quant);
-			products.Add(newProduct);
-
-			string path = @"C:\\Users\\sibai\\Desktop\\mokslai\\Visual studio\\OrdersSystem\\DataFiles\\ProductsData.json";
+            var newProduct = new Products(id2, name, price, quant);
+            products.Add(newProduct);
+            Console.WriteLine($"Sukurtas naujas produktas: {id2} {name} {price} {quant}");
+            return newProduct;
+        }
+		public void AddProductToFile()
+		{
+			var newProduct = AddProductEntities();
+            string path = @"C:\\Users\\sibai\\Desktop\\mokslai\\Visual studio\\OrdersSystem\\DataFiles\\ProductsData.json";
 			var jsonString = File.ReadAllText(path);
 			var list = JsonConvert.DeserializeObject<List<Products>>(jsonString);
 			list.Add(newProduct);
 			var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
 			File.WriteAllText(path, convertedJson);
-
-			Console.WriteLine($"Sukurtas naujas produktas: {id2} {name} {price} {quant}");
 		}
-		public void DeleteProduct()
+		public Products EnterProductToDelete()
 		{
-			Console.WriteLine("Iveskite produkto ID kuri norite pasalinti");
-			int productId = int.Parse(Console.ReadLine());
-			var item = products.SingleOrDefault(x => x.ProductID == productId);
-			products.Remove(item);
+            Console.WriteLine("Iveskite produkto ID kuri norite pasalinti");
+            int productId = int.Parse(Console.ReadLine());
 
-            string path = @"C:\\Users\\sibai\\Desktop\\mokslai\\Visual studio\\OrdersSystem\\DataFiles\\ProductsData.json";
+            var item = products.SingleOrDefault(x => x.ProductID == productId);
+            products.Remove(item);
+            return item;
+        }
+		public void DeleteProductFromFile()
+		{
+			var item = EnterProductToDelete();
+            string path = @"C:\Users\sibai\Desktop\mokslai\Visual studio\OrdersSystem\DataFiles\ProductsData.json";
             var jsonString = File.ReadAllText(path);
             var list = JsonConvert.DeserializeObject<List<Products>>(jsonString);
-            list.Remove(item);
+			list.RemoveAll(list => list.ProductID == item.ProductID).ToString();
             var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
             File.WriteAllText(path, convertedJson);
 			Console.WriteLine("Produktas pasalintas");
