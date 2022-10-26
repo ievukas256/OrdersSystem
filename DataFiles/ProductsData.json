@@ -2,44 +2,43 @@
   {
     "ProductID": 2001,
     "ProductName": "Stalas",
-    "ProductPrice": 105.50,
+    "ProductPrice": 105.5,
     "ProductQuantity": 2
   },
   {
     "ProductID": 2002,
     "ProductName": "Biuro kede",
-    "ProductPrice": 55,
+    "ProductPrice": 55.0,
     "ProductQuantity": 5
   },
   {
     "ProductID": 2003,
     "ProductName": "Komoda",
-    "ProductPrice": 150.60,
+    "ProductPrice": 150.6,
     "ProductQuantity": 10
   },
   {
     "ProductID": 2004,
     "ProductName": "Spintele",
-    "ProductPrice": 25,
+    "ProductPrice": 25.0,
     "ProductQuantity": 23
   },
   {
     "ProductID": 2005,
     "ProductName": "Popierius",
-    "ProductPrice": 5.50,
+    "ProductPrice": 5.5,
     "ProductQuantity": 99
   },
   {
     "ProductID": 2006,
     "ProductName": "Spausdintuvas",
-    "ProductPrice": 250,
+    "ProductPrice": 250.0,
     "ProductQuantity": 7
   },
   {
     "ProductID": 2007,
     "ProductName": "Monitorius",
-    "ProductPrice": 450,
+    "ProductPrice": 450.0,
     "ProductQuantity": 0
   }
 ]
-           

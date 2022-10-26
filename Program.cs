@@ -2,8 +2,7 @@
 using OrdersSystem.Classes;
 using OrdersSystem.Reports;
 using OrdersSystem.Repositories;
-using System.Diagnostics;
-using System.Xml.Linq;
+
 
 CustomersRepository customersRepository = new CustomersRepository();
 OrdersRepository ordersRepository = new OrdersRepository();
@@ -56,12 +55,12 @@ while (working)
 			}
 		case 4:
 			{
-				productsRepository.AddProduct();
+				productsRepository.AddProductToFile();
 				break;
 			}
 		case 5:
 			{
-				productsRepository.DeleteProduct();
+				productsRepository.DeleteProductFromFile();
 				break;
 			}
 		case 6:
@@ -76,9 +75,5 @@ while (working)
 			}
 	}
 }
-
-/*JSONgenerator jsonGenerator = new JSONgenerator(reportGenerator);
-var jsonResult = jsonGenerator.GenerateJsonWithReports();*/
-
 HTMLgenerator htmlGenerator = new HTMLgenerator(reportGenerator);
 var htmlResult = htmlGenerator.GenerateHtmlReportOrders();

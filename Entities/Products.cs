@@ -14,12 +14,25 @@ namespace OrdersSystem.Classes
         public int ProductQuantity { get; set; }
 
 
-        public Products(int productID, string productName, double productPrice, int productQuantity)
+        public Products(int productId, string productName, double productPrice, int productQuantity)
         {
-            ProductID = productID;
+            ProductID = productId;
             ProductName = productName;
             ProductPrice = productPrice;
             ProductQuantity = productQuantity;
+        }
+        public Products(int productId, string productName)
+        {
+            ProductID = productId;
+            ProductName = productName;
+        }
+
+        public Products()
+        {
+        }
+
+        public Products(Products newProduct)
+        {
         }
     }
 }

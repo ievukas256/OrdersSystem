@@ -8,16 +8,15 @@ namespace OrdersSystem.Classes
 {
     public class Customers
     {
+        public int CustomerID { get; set; }
         public string FullName { get; set; }
         public string City { get; set; }
-        public int CustomerId { get; set; }
 
-
-        public Customers(string fullName, string city, int customerId)
+        public Customers(int customerId, string fullName, string city )
         {
             FullName = fullName;
             City = city;
-            CustomerId = customerId;
+            CustomerID = customerId;
         }
     }
 }

@@ -67,10 +67,11 @@ namespace OrdersSystem.Repositories
             int id2 = id + 1;
 
             var newProduct = new Products(id2, name, price, quant);
-            products.Add(newProduct);
-            Console.WriteLine($"Sukurtas naujas produktas: {id2} {name} {price} {quant}");
-            return newProduct;
+			products.Add(newProduct);
+			Console.WriteLine($"Sukurtas naujas produktas: {id2} {name} {price} {quant}");
+			return newProduct;
         }
+	
 		public void AddProductToFile()
 		{
 			var newProduct = AddProductEntities();
@@ -96,7 +97,7 @@ namespace OrdersSystem.Repositories
             string path = @"C:\Users\sibai\Desktop\mokslai\Visual studio\OrdersSystem\DataFiles\ProductsData.json";
             var jsonString = File.ReadAllText(path);
             var list = JsonConvert.DeserializeObject<List<Products>>(jsonString);
-			list.RemoveAll(list => list.ProductID == item.ProductID).ToString();
+			list.RemoveAll(list => list.ProductID == item.ProductID);
             var convertedJson = JsonConvert.SerializeObject(list, Formatting.Indented);
             File.WriteAllText(path, convertedJson);
 			Console.WriteLine("Produktas pasalintas");

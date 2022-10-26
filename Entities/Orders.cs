@@ -9,13 +9,15 @@ namespace OrdersSystem.Classes
     public class Orders
     {
         public int OrderNumber { get; set; }
-        public int CustomerId { get; set; }
+        public int CustomerID { get; set; }
+        public int ProductID { get; set; }
         public string OrderStatus { get; set; }
        
-        public Orders(int orderNumber, int customerId, string orderStatus)
+        public Orders(int orderNumber, int customerId,int productId, string orderStatus)
         {
             OrderNumber = orderNumber;
-            CustomerId = customerId;
+            CustomerID = customerId;
+            ProductID = productId;
             OrderStatus = orderStatus;
             
         }
